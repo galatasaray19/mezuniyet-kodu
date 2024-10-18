@@ -24,9 +24,8 @@ oyunlar = {
         "Zor": ["Darkest Dungeon", "Divinity: Original Sin 2"]
     },
     "Spor": {
-        "Kolay": ["UFLl", "Braid"],
-        "Orta": ["Efootball", "Topspin 2K25
-"],
+        "Kolay": ["UFL", "Braid"],
+        "Orta": ["Efootball", "Topspin 2K25"],
         "Zor": ["Fifa 25", "NBA 2K25"]
     },
     "Strateji": {
@@ -53,3 +52,34 @@ def oyun_oner():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyun Önerici</title>
+</head>
+<body>
+    <h1>PC Oyunu Önerici</h1>
+    <form action="/oneri" method="post">
+        <label for="tur">Oyun Türü:</label>
+        <select name="tur" id="tur">
+            <option value="Aksiyon">Aksiyon</option>
+            <option value="RPG">RPG</option>
+            <option value="Bulmaca">Bulmaca</option>
+            <option value="Strateji">Strateji</option>
+        </select>
+        <br>
+        <label for="zorluk">Zorluk Seviyesi:</label>
+        <select name="zorluk" id="zorluk">
+            <option value="Kolay">Kolay</option>
+            <option value="Orta">Orta</option>
+            <option value="Zor">Zor</option>
+        </select>
+        <br>
+        <input type="submit" value="Oyun Öner">
+    </form>
+</body>
+</html>
